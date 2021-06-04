@@ -1,0 +1,12 @@
+{
+  "name": "national-mobile-app",
+  "displayName": "national-mobile-app",
+  "expo": {
+    "name": "national-mobile-app",
+    "slug": "national-mobile-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
