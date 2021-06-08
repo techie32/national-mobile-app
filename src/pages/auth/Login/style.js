@@ -2,21 +2,18 @@ import { StyleSheet } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
-} from "../../../utils/responsive";
-import { fontFamily } from "../../../assets/fonts";
-import { colors } from "../../../assets/colors";
+} from "utils/responsive";
+import { fontFamily } from "assets/fonts";
+import { colors } from "assets/colors";
 
 export default StyleSheet.create({
   container: {
     justifyContent: "center",
-    alignItems: "center",
     padding: wp("5"),
   },
   logoContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    // marginTop: 10,
-    // marginHorizontal: 10,
   },
   logo: {
     width: wp("30"),

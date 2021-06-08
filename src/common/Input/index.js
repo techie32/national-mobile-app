@@ -20,6 +20,7 @@ export const Input = React.forwardRef(
       required,
       defaultValue,
       handleErrMss,
+      containerStyles,
     },
     ref
   ) => {
@@ -44,7 +45,7 @@ export const Input = React.forwardRef(
       );
     };
     return (
-      <View style={style.container}>
+      <View style={[style.container, containerStyles && containerStyles]}>
         {!!control ? (
           <Controller
             control={control}

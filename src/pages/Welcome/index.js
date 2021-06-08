@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
 import style from "./style";
-import {
-  Image,
-  Text,
-  View,
-  ActivityIndicator,
-  BackHandler,
-} from "react-native";
-import { widthPercentageToDP as wp } from "../../utils/responsive";
+import { Image, View } from "react-native";
 
 export const Welcome = ({ navigation }) => {
   useEffect(() => {
-    setTimeout(() => navigation.navigate("login"), 1000);
+    setTimeout(() => navigation.navigate("Login"), 1000);
   }, []);
 
   return (

@@ -9,10 +9,10 @@ import {
 } from "react-native";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { loginSchema } from "schemas/auth";
+import { loginSchema } from "schemas";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scrollview";
 import { widthPercentageToDP as wp } from "utils/responsive";
-import { Input, Button, Dropdown } from "common";
+import { Input, Button, Dropdown, Header } from "common";
 
 export const Login = ({ navigation }) => {
   const [isLoading, setLoading] = useState(false);
@@ -33,30 +33,17 @@ export const Login = ({ navigation }) => {
     BackHandler.addEventListener("hardwareBackPress", disableBackButton);
   }, []);
 
-  const onSubmit = (data) => {};
+  const onSubmit = (data) => {
+    navigation.navigate("CustomerDetail");
+  };
 
   const handleErrMss = () => {
     setErrMsg("");
   };
-  console.log("errors", errors);
 
   return (
     <KeyboardAwareScrollView contentContainerStyle={style.container}>
-      <View style={style.logoContainer}>
-        <Image
-          source={require("assets/images/activemedia-small.jpg")}
-          style={style.logo}
-          resizeMode="contain"
-        />
-        <Image
-          source={require("assets/images/national.jpeg")}
-          style={style.logo}
-          resizeMode="contain"
-        />
-      </View>
-
-      <Dropdown key="Areas" />
-
+      <Header />
       <Input
         ref={control}
         control={control}

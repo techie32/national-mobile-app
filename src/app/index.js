@@ -1,8 +1,13 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-// import { useSelector } from "react-redux";
-import { Login } from "../pages/auth/login";
-import { Welcome } from "../pages/welcome";
+import {
+  Login,
+  CustomerDetail,
+  Welcome,
+  OTPVerification,
+  Deals,
+  ProductCheckList,
+} from "../pages";
 
 const RootStack = createStackNavigator();
 const options = {
@@ -13,8 +18,12 @@ const options = {
 };
 
 const screens = [
+  { name: "OTPVerification", component: OTPVerification },
+  { name: "ProductCheckList", component: ProductCheckList },
+  { name: "Deals", component: Deals },
+  { name: "CustomerDetail", component: CustomerDetail },
   { name: "Welcome", component: Welcome },
-  { name: "login", component: Login },
+  { name: "Login", component: Login },
 ];
 
 const AppView = () => {

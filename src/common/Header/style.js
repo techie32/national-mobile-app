@@ -3,15 +3,18 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "utils/responsive";
-// import { fontFamily } from "../../../assets/fonts";
-// import { colors } from "../../../assets/colors";
 
 export default StyleSheet.create({
-  container: {
-    justifyContent: "center",
-    alignItems: "center",
+  logoContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    margin: 0,
+    padding: 0,
   },
   logo: {
-    width: "80%",
+    width: wp("30"),
+    height: hp(15),
+    margin: 0,
+    padding: 0,
   },
 });

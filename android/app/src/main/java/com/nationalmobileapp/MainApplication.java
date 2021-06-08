@@ -1,4 +1,4 @@
-import com.reactnativecommunity.picker.RNCPickerPackage;
+// import com.reactnativecommunity.picker.RNCPickerPackage;
 package com.nationalmobileapp;
 
 import android.app.Application;
@@ -50,7 +50,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
-      new RNCPickerPackage()
+      // new RNCPickerPackage()
       
       return packages;
     }

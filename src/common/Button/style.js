@@ -27,25 +27,4 @@ export default StyleSheet.create({
     color: colors.activeColor,
     fontFamily: fontFamily.PoppinsBold,
   },
-  outline: {
-    backgroundColor: "transparent",
-    borderColor: colors.activeColor,
-  },
-  primary: {
-    backgroundColor: colors.primaryButtonColor,
-    borderColor: colors.primaryButtonColor,
-  },
-  outlineLabel: {
-    color: colors.activeColor,
-  },
-  primaryLabel: {
-    color: colors.mainTextColor,
-  },
-  lightLabel: {
-    color: colors.mainTextColor,
-  },
-  light: {
-    borderWidth: 0,
-    backgroundColor: "transparent",
-  },
 });
