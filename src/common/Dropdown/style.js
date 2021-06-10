@@ -3,43 +3,38 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "utils/responsive";
-import { colors } from "assets/colors";
-import { fontFamily } from "assets/fonts";
+import { colors } from "../../assets/colors";
+import { fontFamily } from "../../assets/fonts";
 
 export default StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
-    backgroundColor: colors.cardBackground,
-    marginVertical: wp(3),
+    backgroundColor: colors.gray1,
     padding: wp(1),
     borderRadius: wp(3),
     alignItems: "center",
     alignContent: "center",
-    paddingLeft: wp(3),
+    width: "100%",
+    height: wp("11.75"),
   },
   pickerView: {
-    minWidth: wp(40),
-    backgroundColor: colors.cardBackground,
+    minWidth: "100%",
     borderRadius: 10,
-    display: "flex",
     justifyContent: "center",
     paddingHorizontal: wp("1"),
     height: wp(4),
   },
-  filterName: {
-    position: "absolute",
-    zIndex: 2,
-    paddingLeft: wp("3"),
-    color: colors.mainTextColor,
-  },
   filterValue: {
-    width: "80%",
-    textAlign: "right",
-    marginLeft: wp("12"),
-    position: "relative",
-    color: colors.activeColor,
-    fontFamily: fontFamily.PoppinsBold,
+    width: "100%",
     fontSize: wp("1"),
+    color: colors.gray4,
+    fontFamily: fontFamily.PoppinsMedium,
+  },
+  textError: {
+    fontSize: wp("3"),
+    color: "red",
+    marginLeft: wp(1),
+    fontFamily: fontFamily.MontserratBold,
   },
 });

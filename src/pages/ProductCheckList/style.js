@@ -8,13 +8,11 @@ import { colors } from "assets/colors";
 
 export default StyleSheet.create({
   container: {
-    justifyContent: "center",
-    margin: wp("5"),
-    padding: 0,
-    marginVertical: 0,
+    marginHorizontal: wp(5),
+    height: "100%",
   },
   heading: {
-    fontSize: wp(9),
+    fontSize: wp(7),
     fontWeight: "700",
     color: "#000",
     textAlign: "center",
@@ -34,5 +32,10 @@ export default StyleSheet.create({
   },
   description: {
     fontSize: wp(4),
+  },
+  content: {
+    justifyContent: "space-between",
+    flex: 1,
+    marginBottom: 20,
   },
 });

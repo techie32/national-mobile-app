@@ -3,7 +3,7 @@ import style from "./style";
 import { View, Text } from "react-native";
 import { Button } from "..";
 
-export const Deal = ({ containerStyles }) => {
+export const Deal = ({ containerStyles, handleSelect }) => {
   return (
     <View style={[style.container, containerStyles && containerStyles]}>
       <Text style={style.dealName}>Deal name</Text>
@@ -12,7 +12,11 @@ export const Deal = ({ containerStyles }) => {
         description description description description description description
         description description description
       </Text>
-      <Button label="Select" containerStyles={style.btn} />
+      <Button
+        label="Select"
+        containerStyles={style.btn}
+        onPress={handleSelect}
+      />
     </View>
   );
 };

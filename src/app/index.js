@@ -18,12 +18,12 @@ const options = {
 };
 
 const screens = [
-  { name: "OTPVerification", component: OTPVerification },
-  { name: "ProductCheckList", component: ProductCheckList },
-  { name: "Deals", component: Deals },
-  { name: "CustomerDetail", component: CustomerDetail },
   { name: "Welcome", component: Welcome },
   { name: "Login", component: Login },
+  { name: "CustomerDetail", component: CustomerDetail },
+  { name: "ProductCheckList", component: ProductCheckList },
+  { name: "OTPVerification", component: OTPVerification },
+  { name: "Deals", component: Deals },
 ];
 
 const AppView = () => {

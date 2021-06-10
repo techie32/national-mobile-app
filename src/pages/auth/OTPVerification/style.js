@@ -21,6 +21,7 @@ export default StyleSheet.create({
   content: {
     justifyContent: "space-between",
     flex: 1,
+    marginBottom: 20,
   },
   cell: {
     width: wp(12),
@@ -44,17 +45,4 @@ export default StyleSheet.create({
   },
 
   codeFieldRoot: { marginTop: wp("5") },
-
-  overlay: {
-    flex: 1,
-    justifyContent: "center",
-  },
-  modalHeader: {
-    backgroundColor: colors.green,
-    alignItems: "center",
-  },
-  modalImage: {
-    width: hp(1),
-    height: wp(1),
-  },
 });

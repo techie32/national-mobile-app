@@ -8,11 +8,11 @@ import { colors } from "assets/colors";
 
 export default StyleSheet.create({
   container: {
-    justifyContent: "center",
-    padding: wp("5"),
+    marginHorizontal: wp(5),
+    height: "100%",
   },
   heading: {
-    fontSize: wp(9),
+    fontSize: wp(7),
     fontWeight: "700",
     color: "#000",
     textAlign: "center",

@@ -15,7 +15,7 @@ export const Welcome = ({ navigation }) => {
         resizeMode="contain"
       />
       <Image
-        source={require("../../assets/images/national.jpeg")}
+        source={require("../../assets/images/national.png")}
         style={style.logo}
         resizeMode="cover"
       />

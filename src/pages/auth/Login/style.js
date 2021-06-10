@@ -8,8 +8,8 @@ import { colors } from "assets/colors";
 
 export default StyleSheet.create({
   container: {
-    justifyContent: "center",
-    padding: wp("5"),
+    marginHorizontal: wp(5),
+    height: "100%",
   },
   logoContainer: {
     flexDirection: "row",
@@ -24,19 +24,7 @@ export default StyleSheet.create({
     color: "red",
     fontFamily: fontFamily.PoppinsBold,
   },
-  welcomeMessage: {
-    fontFamily: fontFamily.PoppinsBold,
-    width: "80%",
-    fontSize: wp("8"),
-    letterSpacing: 0,
-    color: colors.mainTextColor,
-    textAlign: "center",
-  },
-  link: {
-    fontFamily: fontFamily.PoppinsMedium,
-    fontSize: wp("3.25"),
-    color: colors.activeColor,
-    textAlign: "center",
-    letterSpacing: 0,
+  formFields: {
+    marginVertical: wp(2),
   },
 });

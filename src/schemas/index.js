@@ -1,7 +1,7 @@
 import * as yup from "yup";
 
 export const loginSchema = yup.object().shape({
-  // area: yup.string().lowercase().trim().label("area"),
+  area: yup.string().lowercase().trim().label("Area").required("required"),
   email: yup
     .string()
     .lowercase()
@@ -17,11 +17,32 @@ export const loginSchema = yup.object().shape({
 });
 
 export const CustomerDetailSchema = yup.object().shape({
-  name: yup.string().trim().required("required").label("Customer Name"),
-  gender: yup.string().trim().required("required").label("Gender"),
-  prevBrand: yup.string().trim().required("required").label("Previous Brands"),
-  address: yup.string().trim().required("required").label("Address"),
-  area: yup.string().trim().required("required").label("Area"),
-  email: yup.string().trim().required("required").label("Email"),
-  mobile: yup.string().trim().required("required").label("Mobile Network"),
+  name: yup
+    .string()
+    .lowercase()
+    .trim()
+    .required("required")
+    .label("Customer Name"),
+  gender: yup.string().lowercase().trim().required("required").label("Gender"),
+  prevBrand: yup
+    .string()
+    .lowercase()
+    .trim()
+    .required("required")
+    .label("Previous Brands"),
+  address: yup
+    .string()
+    .lowercase()
+    .trim()
+    .required("required")
+    .label("Address"),
+  area: yup.string().lowercase().trim().required("required").label("Area"),
+  email: yup.string().lowercase().trim().required("required").label("Email"),
+  mobile: yup
+    .string()
+    .lowercase()
+    .trim()
+    .required("required")
+    .label("Mobile Network"),
+  terms: yup.boolean().required("required").label("Terms of Service"),
 });

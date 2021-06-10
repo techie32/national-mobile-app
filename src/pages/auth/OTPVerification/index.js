@@ -42,15 +42,6 @@ export const OTPVerification = ({ route, navigation }) => {
     navigation.navigate("Deals");
   };
 
-  const disableBackButton = () => {
-    BackHandler.exitApp();
-    return true;
-  };
-
-  useEffect(() => {
-    BackHandler.addEventListener("hardwareBackPress", disableBackButton);
-  }, []);
-
   const handleValueChange = (val) => {
     setValue(val);
     setErrMsg("");
