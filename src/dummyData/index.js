@@ -84,3 +84,42 @@ export const products = [
   { value: false, description: "description" },
   { value: true, description: "description" },
 ];
+
+export const relations = [
+  {
+    label: "Relationship",
+    value: "",
+  },
+  {
+    label: "self",
+    value: "self",
+  },
+  {
+    label: "son",
+    value: "son",
+  },
+  {
+    label: "mother",
+    value: "mother",
+  },
+  {
+    label: "father",
+    value: "father",
+  },
+  {
+    label: "wife",
+    value: "wife",
+  },
+  {
+    label: "daughter",
+    value: "daughter",
+  },
+  {
+    label: "brother",
+    value: "brother",
+  },
+  {
+    label: "sister",
+    value: "sister",
+  },
+];

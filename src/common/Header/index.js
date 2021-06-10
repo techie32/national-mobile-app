@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <View style={style.logoContainer}>
       <Image
-        source={require("assets/images/activemedia-small.png")}
+        source={require("assets/images/activeMedia.png")}
         style={style.logo}
         resizeMode="contain"
       />

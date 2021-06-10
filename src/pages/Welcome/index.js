@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./style";
 import { Image, View } from "react-native";
+import { Texture } from "../../common";
 
 export const Welcome = ({ navigation }) => {
   useEffect(() => {
@@ -9,6 +10,7 @@ export const Welcome = ({ navigation }) => {
 
   return (
     <View style={style.container}>
+      <Texture />
       <Image
         source={require("../../assets/images/activeMedia.png")}
         style={style.logo}
@@ -17,7 +19,7 @@ export const Welcome = ({ navigation }) => {
       <Image
         source={require("../../assets/images/national.png")}
         style={style.logo}
-        resizeMode="cover"
+        resizeMode="contain"
       />
     </View>
   );

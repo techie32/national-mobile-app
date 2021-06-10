@@ -21,7 +21,7 @@ export default StyleSheet.create({
     textTransform: "uppercase",
   },
   subHeading: {
-    color: "#000",
+    color: "#fff",
     fontSize: wp(5),
     marginVertical: wp(3),
   },
@@ -32,6 +32,7 @@ export default StyleSheet.create({
   },
   description: {
     fontSize: wp(4),
+    color: "#fff",
   },
   content: {
     justifyContent: "space-between",

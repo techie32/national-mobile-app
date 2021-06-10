@@ -6,6 +6,7 @@ import { Header } from "./Header";
 import { Deal } from "./Deal";
 import { CheckBoxComp as CheckBox } from "./Checkbox";
 import { SignOut } from "./SignOut";
+import { Texture } from "./Texture";
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   Header,
   Deal,
   CheckBox,
+  Texture,
 };

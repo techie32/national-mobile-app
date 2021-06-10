@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import style from "./style";
-import { Text, ActivityIndicator, View, ImageBackground } from "react-native";
+import { Text, ActivityIndicator, View, Image } from "react-native";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { CustomerDetailSchema } from "schemas";
+import { RetailerDetailSchema } from "schemas";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scrollview";
 import { widthPercentageToDP as wp } from "utils/responsive";
 import {
@@ -14,14 +14,13 @@ import {
   CheckBox,
   Texture,
 } from "../../common";
-import { gender, mobileNetwork, prevBrand, relations } from "../../dummyData";
+import { mobileNetwork, relations } from "../../dummyData";
 
-export const CustomerDetail = ({ navigation }) => {
+export const RetailerDetail = ({ navigation }) => {
   const [isLoading, setLoading] = useState(false);
-  const [termOfService, setTermsOfService] = useState(false);
 
   const { control, handleSubmit, formState } = useForm({
-    resolver: yupResolver(CustomerDetailSchema),
+    resolver: yupResolver(RetailerDetailSchema),
     mode: "onChange",
     reValidateMode: "onChange",
   });
@@ -35,41 +34,25 @@ export const CustomerDetail = ({ navigation }) => {
   const item = { value: false, description: "I agree to term of service" };
 
   return (
-    <View style={style.root}>
+    <View style={{ height: "100%" }}>
       <Texture />
+      <Header />
       <KeyboardAwareScrollView contentContainerStyle={[style.container]}>
-        <Header />
-        <Text style={style.heading}> Customer Details </Text>
+        <Text style={style.heading}> Shop Keeper Detail </Text>
         <Input
           ref={control}
           control={control}
-          name="name"
-          placeholder="Customer Name"
-          error={!!errors?.name}
-          message={errors?.name?.message}
+          name="shopName"
+          placeholder="Shop Name"
+          error={!!errors?.shopName}
+          message={errors?.shopName?.message}
           containerStyles={style.inputContainer}
-        />
-        <Dropdown
-          control={control}
-          name="gender"
-          error={!!errors?.gender}
-          message={errors?.gender?.message}
-          containerStyles={style.inputContainer}
-          items={gender}
-        />
-        <Dropdown
-          control={control}
-          name="prevBrand"
-          error={!!errors?.prevBrand}
-          message={errors?.prevBrand?.message}
-          containerStyles={style.inputContainer}
-          items={prevBrand}
         />
         <Input
           ref={control}
           control={control}
           name="address"
-          placeholder="Address Line 01"
+          placeholder="Shop Address Line 01"
           error={!!errors?.address}
           message={errors?.address?.message}
           containerStyles={style.inputContainer}

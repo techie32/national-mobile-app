@@ -3,22 +3,18 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "utils/responsive";
-import { fontFamily } from "assets/fonts";
-import { colors } from "assets/colors";
+import { fontFamily } from "../../assets/fonts";
 
 export default StyleSheet.create({
-  root: {
-    height: "100%",
-  },
   container: {
     marginHorizontal: wp(5),
   },
   heading: {
-    fontSize: wp(7),
-    fontWeight: "700",
+    fontSize: wp(9),
     color: "#000",
     textAlign: "center",
     backgroundColor: "lightgreen",
+    fontFamily: fontFamily.MontserratBold,
     marginBottom: hp(3),
   },
   inputContainer: {

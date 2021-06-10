@@ -8,11 +8,10 @@ export default StyleSheet.create({
   logoContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    margin: 0,
-    padding: 0,
+    marginHorizontal: wp(5),
   },
   logo: {
-    width: wp("30"),
+    width: wp("40"),
     height: hp(15),
     margin: 0,
     padding: 0,

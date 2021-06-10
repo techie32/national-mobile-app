@@ -4,18 +4,22 @@ import {
   heightPercentageToDP as hp,
 } from "utils/responsive";
 import { colors } from "../../assets/colors";
+import { fontFamily } from "../../assets/fonts";
 
 export default StyleSheet.create({
+  root: {
+    height: "100%",
+  },
   overlay: {
     flex: 1,
     justifyContent: "center",
   },
-  modalHeader: {
+  header: {
     backgroundColor: colors.green,
     alignItems: "center",
     paddingVertical: hp(5),
   },
-  modalImage: {
+  image: {
     width: hp(20),
     height: wp(20),
   },
@@ -27,7 +31,9 @@ export default StyleSheet.create({
   },
   text: {
     textAlign: "center",
-    fontSize: wp(4),
+    fontSize: wp(6),
+    color: "#fff",
+    fontFamily: fontFamily.MontserratBold,
   },
   resBtn: {
     width: "80%",

@@ -3,28 +3,25 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "utils/responsive";
-import { fontFamily } from "assets/fonts";
-import { colors } from "assets/colors";
+import { fontFamily } from "../../../assets/fonts";
 
 export default StyleSheet.create({
-  container: {
-    marginHorizontal: wp(5),
+  root: {
     height: "100%",
   },
-  logoContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  container: {
+    marginHorizontal: wp(5),
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
   },
-  logo: {
-    width: wp("30"),
-    height: hp("18"),
+  formFields: {
+    marginVertical: wp(2),
+    justifyContent: "center",
   },
   errMsg: {
     fontSize: wp("3.6"),
     color: "red",
     fontFamily: fontFamily.PoppinsBold,
-  },
-  formFields: {
-    marginVertical: wp(2),
   },
 });

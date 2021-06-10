@@ -13,9 +13,10 @@ export const Input = React.forwardRef(
       message,
       control,
       name,
-      required,
       defaultValue,
       containerStyles,
+      keyboardType,
+      editable = true,
     },
     ref
   ) => {
@@ -31,6 +32,8 @@ export const Input = React.forwardRef(
           style={style.input}
           placeholder={placeholder}
           underlineColorAndroid={"transparent"}
+          keyboardType={!!keyboardType ? keyboardType : "default"}
+          editable={editable}
         />
       );
     };

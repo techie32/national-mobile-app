@@ -36,8 +36,8 @@ export const CustomerDetailSchema = yup.object().shape({
     .trim()
     .required("required")
     .label("Address"),
-  area: yup.string().lowercase().trim().required("required").label("Area"),
-  email: yup.string().lowercase().trim().required("required").label("Email"),
+  area: yup.string().lowercase().trim().label("Area"),
+  email: yup.string().lowercase().trim().label("Email"),
   mobile: yup
     .string()
     .lowercase()
@@ -45,4 +45,33 @@ export const CustomerDetailSchema = yup.object().shape({
     .required("required")
     .label("Mobile Network"),
   terms: yup.boolean().required("required").label("Terms of Service"),
+  number: yup.string().required("required").label("Number"),
+  relationship: yup.string().required("required").label("Relationship"),
+});
+
+export const RetailerDetailSchema = yup.object().shape({
+  shopName: yup
+    .string()
+    .lowercase()
+    .trim()
+    .required("required")
+    .label("Customer Name"),
+
+  address: yup
+    .string()
+    .lowercase()
+    .trim()
+    .required("required")
+    .label("Address"),
+  area: yup.string().lowercase().trim().label("Area"),
+  email: yup.string().lowercase().trim().label("Email"),
+  mobile: yup
+    .string()
+    .lowercase()
+    .trim()
+    .required("required")
+    .label("Mobile Network"),
+  terms: yup.boolean().required("required").label("Terms of Service"),
+  number: yup.string().required("required").label("Number"),
+  relationship: yup.string().required("required").label("Relationship"),
 });

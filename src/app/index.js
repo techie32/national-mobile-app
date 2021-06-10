@@ -7,7 +7,10 @@ import {
   OTPVerification,
   Deals,
   ProductCheckList,
+  RetailerDetail,
 } from "../pages";
+import { View } from "react-native";
+import { Header, SignOut } from "../common";
 
 const RootStack = createStackNavigator();
 const options = {
@@ -19,11 +22,13 @@ const options = {
 
 const screens = [
   { name: "Welcome", component: Welcome },
-  { name: "Login", component: Login },
+  { name: "RetailerDetail", component: RetailerDetail },
   { name: "CustomerDetail", component: CustomerDetail },
+  { name: "Login", component: Login },
   { name: "ProductCheckList", component: ProductCheckList },
   { name: "OTPVerification", component: OTPVerification },
   { name: "Deals", component: Deals },
+  { name: "SignOut", component: SignOut },
 ];
 
 const AppView = () => {
@@ -37,9 +42,11 @@ const AppView = () => {
     );
   });
   return (
-    <RootStack.Navigator screenOptions={options}>
-      {tabnavigatorRender}
-    </RootStack.Navigator>
+    <View style={{ height: "100%", width: "100%" }}>
+      <RootStack.Navigator screenOptions={options}>
+        {tabnavigatorRender}
+      </RootStack.Navigator>
+    </View>
   );
 };
 export default AppView;

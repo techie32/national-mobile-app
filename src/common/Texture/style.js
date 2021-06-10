@@ -1,12 +1,13 @@
 import { StyleSheet } from "react-native";
+
 export default StyleSheet.create({
-  container: {
+  texture: {
     justifyContent: "center",
-    alignItems: "center",
+    flex: 1,
+    resizeMode: "cover",
+    width: "100%",
+    resizeMode: "cover",
+    position: "absolute",
     height: "100%",
-  },
-  logo: {
-    width: "80%",
-    height: "20%",
   },
 });

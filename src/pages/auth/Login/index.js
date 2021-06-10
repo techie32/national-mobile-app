@@ -12,7 +12,7 @@ import { useForm } from "react-hook-form";
 import { loginSchema } from "schemas";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scrollview";
 import { widthPercentageToDP as wp } from "utils/responsive";
-import { Input, Button, Dropdown, Header } from "../../../common";
+import { Input, Button, Dropdown, Header, Texture } from "../../../common";
 import { areas } from "../../../dummyData";
 
 export const Login = ({ navigation }) => {
@@ -38,9 +38,11 @@ export const Login = ({ navigation }) => {
   };
 
   return (
-    <KeyboardAwareScrollView contentContainerStyle={style.container}>
+    <View style={style.root}>
+      <Texture />
       <Header />
-      <View style={style.formFields}>
+
+      <KeyboardAwareScrollView contentContainerStyle={style.container}>
         <Dropdown
           control={control}
           name="area"
@@ -69,21 +71,21 @@ export const Login = ({ navigation }) => {
           isPassword
           containerStyles={style.formFields}
         />
-      </View>
-      <Button
-        label={!isLoading && "Login"}
-        primary={formState.isValid}
-        icon={
-          isLoading && (
-            <ActivityIndicator
-              style={{ position: "absolute", left: wp("36") }}
-            />
-          )
-        }
-        active={formState.isValid && !isLoading}
-        onPress={handleSubmit(onSubmit)}
-      />
-      <View style={{ padding: wp("6") }} />
-    </KeyboardAwareScrollView>
+        <Button
+          label={!isLoading && "Login"}
+          primary={formState.isValid}
+          icon={
+            isLoading && (
+              <ActivityIndicator
+                style={{ position: "absolute", left: wp("36") }}
+              />
+            )
+          }
+          active={formState.isValid && !isLoading}
+          onPress={handleSubmit(onSubmit)}
+          containerStyles={style.formFields}
+        />
+      </KeyboardAwareScrollView>
+    </View>
   );
 };

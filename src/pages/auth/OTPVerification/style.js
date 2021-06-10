@@ -7,16 +7,21 @@ import { colors } from "../../../assets/colors";
 import { fontFamily } from "assets/fonts";
 
 export default StyleSheet.create({
+  root: {
+    height: "100%",
+  },
   container: {
     justifyContent: "center",
     marginHorizontal: wp(5),
     height: "100%",
   },
   heading: {
-    fontSize: wp(5),
+    fontSize: wp(7),
     fontWeight: "700",
     color: "#000",
     textAlign: "center",
+    backgroundColor: "lightgreen",
+    marginBottom: hp(3),
   },
   content: {
     justifyContent: "space-between",
@@ -31,7 +36,8 @@ export default StyleSheet.create({
     marginLeft: 1,
     borderWidth: 2,
     borderRadius: wp(2.5),
-    borderColor: colors.inactiveColor,
+    borderColor: "#fff",
+    backgroundColor: "#fff",
     fontFamily: fontFamily.PoppinsBold,
     textAlign: "center",
     color: "#000",

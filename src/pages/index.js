@@ -3,6 +3,7 @@ import { Welcome } from "./Welcome";
 import { Login, OTPVerification } from "./auth";
 import { Deals } from "./Deals";
 import { ProductCheckList } from "./ProductCheckList";
+import { RetailerDetail } from "./RetailerDetail";
 
 export {
   CustomerDetail,
@@ -11,4 +12,5 @@ export {
   OTPVerification,
   Deals,
   ProductCheckList,
+  RetailerDetail,
 };
